@@ -1,0 +1,51 @@
+{
+  "seller": [
+    {
+      "id": "f32c",
+      "name": "yuvan",
+      "email": "yuvan@gmail.com",
+      "password": "abc123"
+    },
+    {
+      "id": "0cb9",
+      "name": "krunals",
+      "email": "krunal@gmail.com",
+      "password": "123456"
+    },
+    {
+      "id": "5e4d",
+      "name": "pradip singh",
+      "email": "pradip@gmail.com",
+      "password": "12345"
+    }
+  ],
+  "Products": [
+    {
+      "id": "bd19",
+      "productName": "iphone 15",
+      "price": "1,20000",
+      "color": "black",
+      "category": "mobile",
+      "description": "Apple mobile phone",
+      "productUrl": "https://rukminim2.flixcart.com/image/312/312/kp5sya80/screen-guard/tempered-glass/o/v/n/apple-macbook-air-m1-13-3-inch-lightwings-original-imag3gh5xftgbpg3.jpeg?q=70"
+    },
+    {
+      "id": "56ae",
+      "productName": "Macbook",
+      "price": "14000",
+      "color": "silver",
+      "category": "mobile",
+      "description": "God laptop",
+      "productUrl": "https://rukminim2.flixcart.com/image/312/312/l0igvww0/mobile/2/g/r/-original-imagca5kqvhuscnv.jpeg?q=70"
+    },
+    {
+      "id": "18de",
+      "productName": "iphone 11",
+      "price": "40,000",
+      "color": "black",
+      "category": "mobile",
+      "description": "good product",
+      "productUrl": "https://rukminim2.flixcart.com/image/312/312/kp5sya80/screen-guard/tempered-glass/o/v/n/apple-macbook-air-m1-13-3-inch-lightwings-original-imag3gh5xftgbpg3.jpeg?q=70"
+    }
+  ]
+}

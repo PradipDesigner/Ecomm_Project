@@ -1,0 +1,70 @@
+<div class="container pt-3">
+    <div class="row">
+        <div class="col-md-3"></div>
+        <div class="col-md-6" *ngIf="showLogin">
+            <h3 class="mb-3">{{sellerRagister | titlecase}}</h3>
+            <form #sellerRagisterForm="ngForm"
+                (ngSubmit)="sellerRagisterForm.form.valid && SignUp(sellerRagisterForm.value)">
+                <div class="mb-3">
+                    <label for="examplename" class="form-label">Enter Name</label>
+                    <input type="text" class="form-control" id="examplename" name="name" ngModel required="required"
+                        #name="ngModel">
+                    <small class="text-danger" *ngIf="name.touched && !name.valid"> Please enter your name </small>
+                </div>
+                <div class="mb-3">
+                    <label for="exampleInputEmail1" class="form-label">Email address</label>
+                    <input type="email" class="form-control" id="exampleInputEmail1" name="email" ngModel
+                        required="required" #email="ngModel">
+                    <small class="text-danger" *ngIf="email.touched && !email.valid"> Please enter valid email </small>
+                </div>
+                <div class="mb-3">
+                    <label for="exampleInputPassword1" class="form-label">Creat Password</label>
+                    <input type="password" class="form-control" id="exampleInputPassword1" name="password" ngModel
+                        required="required" #pass="ngModel">
+                    <small class="text-danger" *ngIf="pass.touched && !pass.valid"> Please creat your password </small>
+                </div>
+                <!-- <div class="mb-3 form-check">
+                  <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                  <label class="form-check-label" for="exampleCheck1">Check me out</label>
+                </div> -->
+                <div class="d-flex justify-content-between align-items-center">
+                    <button type="submit" class="btn btn-primary">Ragister</button>
+                    <span class="form-text">if you have already Ragister <a href="javascript:void(0)"
+                            (click)="OpenLogin()">click here</a></span>
+                </div>
+            </form>
+        </div>
+        <ng-template [ngIf]="!showLogin">
+            <div class="col-md-6">
+                <h3 class="mb-3">{{sellerlogin | titlecase}}</h3>
+                <p class="text-danger text-center">{{logInError}}</p>
+                <form #sellerLogin="ngForm"
+                    (ngSubmit)="sellerLogin.form.valid && Login(sellerLogin.value)">
+                    <div class="mb-3">
+                        <label for="exampleInputEmail1" class="form-label">Email address</label>
+                        <input type="email" class="form-control" id="exampleInputEmail1" name="email" ngModel
+                            required="required" #email="ngModel">
+                        <small class="text-danger" *ngIf="email.touched && !email.valid"> Please enter valid Email
+                        </small>
+                    </div>
+                    <div class="mb-3">
+                        <label for="exampleInputPassword1" class="form-label">Enter Password</label>
+                        <input type="password" class="form-control" id="exampleInputPassword1" name="password" ngModel
+                            required="required" #pass="ngModel">
+                        <small class="text-danger" *ngIf="pass.touched && !pass.valid"> Please enter your password
+                        </small>
+                    </div>
+                    <!-- <div class="mb-3 form-check">
+                      <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                      <label class="form-check-label" for="exampleCheck1">Check me out</label>
+                    </div> -->
+                    <div class="d-flex justify-content-between align-items-center">
+                        <button type="submit" class="btn btn-primary">Login</button>
+                        <span class="form-text">if you have already Ragister <a href="javascript:void(0)"
+                                (click)="OpenSignup()">click here</a></span>
+                    </div>
+                </form>
+            </div>
+        </ng-template>
+    </div>
+</div>
