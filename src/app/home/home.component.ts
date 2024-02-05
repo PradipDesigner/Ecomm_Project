@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { ProductService } from '../services/product.service';
+import { product } from '../data-type';
 
 @Component({
   selector: 'app-home',
@@ -6,5 +8,19 @@ import { Component } from '@angular/core';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent {
+  productdata: undefined | product[]
 
+  constructor(private productservice:ProductService){}
+
+  ngOnInit(){
+    this.productservice.popularProduct().subscribe((result)=>{
+      this.productdata = result
+    })
+  }
+  activeItemIndex: number = 0;
+
+  // Method to change the active item
+  setActiveItem(index: number) {
+    this.activeItemIndex = index;
+  }
 }

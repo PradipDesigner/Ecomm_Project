@@ -19,14 +19,14 @@
                     <tr *ngFor="let product of productList, let i=index">
                         <td>{{i+1}}</td>
                         <td><img width="50px" src="{{product.productUrl}}" alt=""></td>
-                        <td>{{product.productName}}</td>
-                        <td>{{product.price}}</td>
-                        <td>{{product.category}}</td>
-                        <td>{{product.color}}</td>
-                        <td>{{product.description}}</td>
+                        <td>{{product.productName | titlecase}}</td>
+                        <td>{{product.price | currency: 'INR'}}</td>
+                        <td>{{product.category | titlecase}}</td>
+                        <td>{{product.color | titlecase}}</td>
+                        <td>{{product.description |titlecase}}</td>
                         <td>
                             <button class="btn btn-outline-danger btn-sm mx-1" (click)="deleteProduct(product.id)"><i class="bi bi-trash"></i></button>
-                            <button class="btn btn-outline-primary btn-sm mx-1" routerLink="/seller-update-product/{{product.id}}"><i class="bi bi-pencil-square"></i></button>
+                            <button class="btn btn-outline-success btn-sm mx-1" routerLink="/seller-update-product/{{product.id}}"><i class="bi bi-pencil-square"></i></button>
                         </td>
                     </tr>
                 </tbody>

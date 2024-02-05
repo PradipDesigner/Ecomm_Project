@@ -21,31 +21,40 @@
   ],
   "Products": [
     {
-      "id": "bd19",
+      "productName": "Nike",
+      "price": "2999",
+      "color": "white",
+      "category": "shoes",
+      "description": "good shoes",
+      "productUrl": "https://rukminim2.flixcart.com/image/612/612/xif0q/shoe/g/e/m/3-5-fq6795-100-3-5-nike-sail-black-phantom-platinum-violet-original-imagxhrebne3suvm.jpeg?q=70",
+      "id": "e81a"
+    },
+    {
+      "productName": "Nike",
+      "price": "1999",
+      "color": "white",
+      "category": "shoes",
+      "description": "nice sneaker",
+      "productUrl": "https://rukminim2.flixcart.com/image/612/612/xif0q/shoe/9/0/7/6-5-fq7628-100-6-5-nike-white-team-red-adobe-dragon-red-original-imagxhreuhpreufr.jpeg?q=70",
+      "id": "767a"
+    },
+    {
       "productName": "iphone 15",
-      "price": "1,20000",
-      "color": "black",
+      "price": "99999",
+      "color": "green",
       "category": "mobile",
-      "description": "Apple mobile phone",
-      "productUrl": "https://rukminim2.flixcart.com/image/312/312/kp5sya80/screen-guard/tempered-glass/o/v/n/apple-macbook-air-m1-13-3-inch-lightwings-original-imag3gh5xftgbpg3.jpeg?q=70"
+      "description": "good mobile phone",
+      "productUrl": "https://rukminim2.flixcart.com/image/312/312/l0igvww0/mobile/2/g/r/-original-imagca5kqvhuscnv.jpeg?q=70",
+      "id": "c04e"
     },
     {
-      "id": "56ae",
       "productName": "Macbook",
-      "price": "14000",
-      "color": "silver",
-      "category": "mobile",
-      "description": "God laptop",
-      "productUrl": "https://rukminim2.flixcart.com/image/312/312/l0igvww0/mobile/2/g/r/-original-imagca5kqvhuscnv.jpeg?q=70"
-    },
-    {
-      "id": "18de",
-      "productName": "iphone 11",
-      "price": "40,000",
-      "color": "black",
-      "category": "mobile",
-      "description": "good product",
-      "productUrl": "https://rukminim2.flixcart.com/image/312/312/kp5sya80/screen-guard/tempered-glass/o/v/n/apple-macbook-air-m1-13-3-inch-lightwings-original-imag3gh5xftgbpg3.jpeg?q=70"
+      "price": "1999",
+      "color": "white",
+      "category": "laptop",
+      "description": "good laptop",
+      "productUrl": "https://rukminim2.flixcart.com/image/312/312/xif0q/computer/y/8/m/macbook-air-thin-and-light-laptop-apple-original-imagqaphwbzpgjzr.jpeg?q=70",
+      "id": "d460"
     }
   ]
 }

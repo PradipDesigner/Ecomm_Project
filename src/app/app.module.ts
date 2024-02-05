@@ -8,6 +8,7 @@ import { FormsModule } from '@angular/forms';
 import { SellerDashboardComponent } from './seller-dashboard/seller-dashboard.component';
 import { HttpClientModule } from '@angular/common/http';
 import { SellerUpdateProductComponent } from './seller-update-product/seller-update-product.component';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 
 @NgModule({
   declarations: [
@@ -15,6 +16,7 @@ import { SellerUpdateProductComponent } from './seller-update-product/seller-upd
     HeaderComponent,
     SellerDashboardComponent,
     SellerUpdateProductComponent,
+    PageNotFoundComponent,
   ],
   imports: [
     BrowserModule,

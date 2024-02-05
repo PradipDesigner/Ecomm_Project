@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { SellerDashboardComponent } from './seller-dashboard/seller-dashboard.component';
 import { AuthGuard } from './Authentication/auth.guard';
 import { SellerUpdateProductComponent } from './seller-update-product/seller-update-product.component';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 
 const routes: Routes = [
   {
@@ -27,6 +28,9 @@ const routes: Routes = [
   {
     path:'seller-update-product/:id',component:SellerUpdateProductComponent,
     canActivate:[AuthGuard]
+  },
+  {
+    path:'**' , component:PageNotFoundComponent
   }
 
 ];
