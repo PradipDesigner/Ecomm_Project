@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { Route, Router } from '@angular/router';
+import { ProductService } from '../services/product.service';
+import { product } from '../data-type';
 
 @Component({
   selector: 'app-header',
@@ -7,10 +9,16 @@ import { Route, Router } from '@angular/router';
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent {
-  constructor(private router:Router){}
+  constructor(private router:Router, private productService:ProductService){}
 
   menuType:string ='default';
   sellerName:string = '';
+  username:string='';
+  cartItem=0;
+
+
+
+
   ngOnInit(): void{
     this.router.events.subscribe((val:any)=>{
       // console.log(val.url)
@@ -25,15 +33,49 @@ export class HeaderComponent {
             this.sellerName = sellerdata.name
           }
         }
+        else if(localStorage.getItem('user')){
+          let userStore = localStorage.getItem('user')
+          let userdta = userStore && JSON.parse(userStore)[0]
+          this.username = userdta.username
+          this.menuType = 'user'
+        }
         else{
           this.menuType = 'default'
         }
       }
     })
+
+    let cartCount = localStorage.getItem('localCart');
+    if(cartCount){
+      this.cartItem = JSON.parse(cartCount).length
+    }
+    this.productService.Cartdatastore.subscribe((result)=>{
+      this.cartItem = result.length
+    })
+
   }
 
   logOut(){
     localStorage.removeItem('seller');
     this.router.navigate(['/'])
+  }
+  userlogOut(){
+    localStorage.removeItem('user');
+    this.router.navigate(['user-auth'])
+  }
+
+  search(data:any){
+    // if(data){
+    //   let element = data.target as HTMLInputElement
+    //   // console.warn(result.value)
+    //   this.productService.searchProduct(element.value).subscribe((result)=>{
+    //     console.log(result)
+    //   })  
+    // }
+    // this.productService.searchProduct(data).subscribe((data: product[]) => {
+    //   console.log("final data --->", data);
+    //   console.log("Number of products: ", data.length);
+    //   // Do something with the data here
+    // });
   }
 }

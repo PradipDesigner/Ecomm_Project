@@ -10,11 +10,17 @@ import { product } from '../data-type';
 export class HomeComponent {
   productdata: undefined | product[]
 
+  trendyProducts: undefined |product[]
+
   constructor(private productservice:ProductService){}
 
   ngOnInit(){
     this.productservice.popularProduct().subscribe((result)=>{
       this.productdata = result
+    })
+
+    this.productservice.trendyProduct().subscribe((result)=>{
+      this.trendyProducts = result
     })
   }
   activeItemIndex: number = 0;
@@ -23,4 +29,5 @@ export class HomeComponent {
   setActiveItem(index: number) {
     this.activeItemIndex = index;
   }
+
 }

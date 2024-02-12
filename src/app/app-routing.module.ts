@@ -30,6 +30,12 @@ const routes: Routes = [
     canActivate:[AuthGuard]
   },
   {
+    path:'productDetails/:id',loadChildren:() => import('./product-details/product-details.module').then(m=>m.ProductDetailsModule)
+  },
+  {
+    path:'user-auth',loadChildren: ()=> import('./user-auth/user-auth.module').then(m=>m.UserAuthModule)
+  },
+  {
     path:'**' , component:PageNotFoundComponent
   }
 

@@ -1,0 +1,53 @@
+<div class="container pt-4">
+    <div class="row">
+        <div class="col-md-3"></div>
+        <ng-template [ngIf]="!showLoginForm">
+            <div class="col-md-6">
+                <h3>SignUp Form</h3>
+                <p class="fw-bold text-center text-success">{{signupmsgtext}}</p>
+                <form [formGroup]="signUpForm" (submit)="getSignUpdata()">
+                    <div class="mb-3">
+                        <label class="form-label">Enter your name</label>
+                        <input type="text" class="form-control" name="username" formControlName="username" placeholder="Enter your name">
+                        <!-- <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div> -->
+                      </div>
+                    <div class="mb-3">
+                      <label for="exampleInputEmail1" class="form-label">Email address</label>
+                      <input type="email" class="form-control" placeholder="Enter your Email" name="email" formControlName="email">
+                      <!-- <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div> -->
+                    </div>
+                    <div class="mb-3">
+                      <label for="exampleInputPassword1" class="form-label">Password</label>
+                      <input type="password" class="form-control" placeholder="Creat your password" name="password" formControlName="password">
+                    </div>
+                    <div class="d-flex justify-content-between">
+                        <button type="submit" class="btn btn-primary" [disabled]="!signUpForm.valid">Submit</button>
+                        <span>If you have already an account <a href="javascript:void(0)" class="text-link" (click)="showLogin()">Login here</a></span>
+                    </div>
+                  </form>
+            </div>
+        </ng-template>
+        <ng-template [ngIf]="showLoginForm">
+            <div class="col-md-6">
+                <h3>Login Form</h3>
+                <p class="text-danger text-center fw-bold">{{ErrorMsg}}</p>
+                <form [formGroup]="signInForm" (submit)="getLogUpdata()">
+                    <div class="mb-3">
+                      <label for="exampleInputEmail1" class="form-label">Email address</label>
+                      <input type="email" class="form-control" id="exampleInputEmail1" name="email" formControlName="email">
+                      <!-- <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div> -->
+                    </div>
+                    <div class="mb-3">
+                      <label for="exampleInputPassword1" class="form-label">Password</label>
+                      <input type="password" class="form-control" id="exampleInputPassword1" name="password" formControlName="password">
+                    </div>
+                    
+                    <div class="d-flex justify-content-between">
+                        <button type="submit" class="btn btn-primary" [disabled]="!signInForm.valid">Submit</button>
+                    <span>If you don't have an account <a href="javascript:void(0)" class="text-link" (click)="showSignUp()">click here</a></span>
+                    </div>
+                  </form>
+            </div>
+        </ng-template>
+    </div>
+</div>

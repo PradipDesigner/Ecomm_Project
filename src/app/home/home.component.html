@@ -1,23 +1,4 @@
-<!-- <div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel" *ngIf="productdata">
-  <div class="carousel-inner">
-    <div *ngFor="let item of productdata">
-        <div class="carousel-item active" >
-            <img src="{{item.productUrl}}" class="d-block">
-          </div>
-    </div>
-    
-  </div>
-  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
-    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Previous</span>
-  </button>
-  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="next">
-    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Next</span>
-  </button>
-</div> -->
-
-<div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+<div id="carouselExampleCaptions" class="carousel slide mt-4" data-bs-ride="carousel">
     <div class="carousel-indicators">
       <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
       <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
@@ -25,7 +6,7 @@
     </div>
     <div class="carousel-inner">
         <div *ngFor="let item of productdata; let i = index" [class.carousel-item]="true" [class.active]="i === activeItemIndex">
-          <img src="{{ item.productUrl }}" class="d-block w-100" alt="...">
+          <img src="{{ item.productUrl }}" class="d-block" alt="...">
           <div class="carousel-caption d-none d-md-block">
             <h5>{{ item.productName }} {{ item.price | currency:'INR' }}</h5>
             <p>{{ item.description | titlecase }}</p>
@@ -42,3 +23,29 @@
       <span class="visually-hidden">Next</span>
     </button>
   </div>
+
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <h4 class="mb-4">Trendy Producs</h4>
+    </div>
+    <div class="col-md-4 d-flex align-items-stretch" *ngFor="let product of trendyProducts">
+      <div class="card w-100">
+        <div class="px-3 pt-3 text-center">
+          <img class="card-img-top" src="{{product.productUrl}}" alt="Card image">
+        </div>
+        <div class="card-body text-center">
+          <h5 class="card-title">{{product.productName | titlecase}}</h5>
+        <p class="card-text mb-1">Price: {{product.price | currency:'INR'}}</p>
+        <p class="card-text mb-1">color: {{product.color}}</p>
+        <p class="card-text mb-0">{{product.description}}</p>
+        </div>
+        <div class="card-footer justify-content-between d-flex">
+          <a href="#" class="btn btn-outline-primary btn-sm" routerLink="/productDetails/{{product.id}}">View Details</a>
+          <a href="#" class="btn btn-outline-success btn-sm">Add Cart</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

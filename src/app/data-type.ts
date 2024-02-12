@@ -16,4 +16,5 @@ export interface product{
     description:string;
     productUrl:string;
     id:any;
+    quantity:number | undefined
 }

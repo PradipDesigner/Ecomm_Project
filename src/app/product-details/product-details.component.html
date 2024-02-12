@@ -1,0 +1,34 @@
+<div class="container pt-4">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="card">
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <img src="{{productData?.productUrl}}" alt="product-img" class="img-fluid" style="max-height: 200px;">
+                        </div>
+                        <div class="col-md-8">
+                            <h3>{{productData?.productName | titlecase}}</h3>
+                            <p class="mb-1">Price: {{productData?.price | currency:'INR'}}</p>
+                            <p class="mb-1">Color</p>
+                            <span class="product-color" [style.backgroundColor]="productData?.color"></span>
+                            <p class="mb-3">Description: {{productData?.description |titlecase}}</p>
+                            <div class="mb-3">
+                                <button class="btn btn-primary me-3">Buy Now</button>
+                            <button class="btn btn-outline-success" *ngIf="!removecartdata" (click)="Addcart()">Add Cart</button>
+                            <button class="btn btn-outline-success" *ngIf="removecartdata" (click)="removeCart(productData?.id)">Remove to Cart</button>
+                            </div>
+
+                            <div class="input-group mb-3" style="width: 150px;">
+                                <button class="input-group-text" id="inputGroup-sizing-default" (click)="handelQuantity('minus')"><i class="bi bi-dash-lg"></i></button>
+                                <input type="text" class="form-control text-center" readonly value="{{Quantity}}">
+                                <button class="input-group-text" id="inputGroup-sizing-default" (click)="handelQuantity('plus')"><i class="bi bi-plus-lg"></i></button>
+                              </div>
+                              <small class="text-danger">{{limitMsg}}</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

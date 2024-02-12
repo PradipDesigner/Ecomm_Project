@@ -9,6 +9,7 @@ import { SellerDashboardComponent } from './seller-dashboard/seller-dashboard.co
 import { HttpClientModule } from '@angular/common/http';
 import { SellerUpdateProductComponent } from './seller-update-product/seller-update-product.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { ReactiveFormsModule } from '@angular/forms'; 
 
 @NgModule({
   declarations: [
@@ -16,13 +17,14 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
     HeaderComponent,
     SellerDashboardComponent,
     SellerUpdateProductComponent,
-    PageNotFoundComponent,
+    PageNotFoundComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

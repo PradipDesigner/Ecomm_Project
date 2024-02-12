@@ -19,42 +19,104 @@
       "password": "12345"
     }
   ],
+  "user": [
+    {
+      "id": "e598",
+      "username": "krunal",
+      "email": "krunal@gmail.com",
+      "password": "12345"
+    },
+    {
+      "id": "00ba",
+      "username": "pradip",
+      "email": "pradip@gmail.com",
+      "password": "12345"
+    },
+    {
+      "id": "480e",
+      "username": "neelam",
+      "email": "neelam@gmail.com",
+      "password": "12345"
+    },
+    {
+      "id": "c5a1",
+      "username": "yuvansh",
+      "email": "yuvansh@gmail.com",
+      "password": "12345"
+    }
+  ],
   "Products": [
     {
-      "productName": "Nike",
+      "productName": "Boat ",
       "price": "2999",
-      "color": "white",
-      "category": "shoes",
-      "description": "good shoes",
-      "productUrl": "https://rukminim2.flixcart.com/image/612/612/xif0q/shoe/g/e/m/3-5-fq6795-100-3-5-nike-sail-black-phantom-platinum-violet-original-imagxhrebne3suvm.jpeg?q=70",
-      "id": "e81a"
+      "color": "black",
+      "category": "watch",
+      "description": "good watch for personal use",
+      "productUrl": "https://images-na.ssl-images-amazon.com/images/I/418liDrUObL._SX320_QL100_AC_SCLZZZZZZZ_.jpg",
+      "id": "4169"
     },
     {
-      "productName": "Nike",
+      "id": "4596",
+      "productName": "fire boalt",
       "price": "1999",
-      "color": "white",
-      "category": "shoes",
-      "description": "nice sneaker",
-      "productUrl": "https://rukminim2.flixcart.com/image/612/612/xif0q/shoe/9/0/7/6-5-fq7628-100-6-5-nike-white-team-red-adobe-dragon-red-original-imagxhreuhpreufr.jpeg?q=70",
-      "id": "767a"
+      "color": "black",
+      "category": "watch",
+      "description": "good digital watch",
+      "productUrl": "https://images-na.ssl-images-amazon.com/images/I/41GX3Cso8SL._SX320_QL100_AC_SCLZZZZZZZ_.jpg"
     },
     {
+      "id": "be25",
       "productName": "iphone 15",
-      "price": "99999",
+      "price": "79999",
+      "color": "white",
+      "category": "mobile",
+      "description": "good smart mobile",
+      "productUrl": "https://m.media-amazon.com/images/W/MEDIAX_849526-T2/images/I/71PjpS59XLL._AC_SR360,240_QL70_.jpg"
+    },
+    {
+      "productName": "samsung galaxy",
+      "price": "2000",
       "color": "green",
       "category": "mobile",
       "description": "good mobile phone",
-      "productUrl": "https://rukminim2.flixcart.com/image/312/312/l0igvww0/mobile/2/g/r/-original-imagca5kqvhuscnv.jpeg?q=70",
-      "id": "c04e"
+      "productUrl": "https://m.media-amazon.com/images/W/MEDIAX_849526-T2/images/I/818VqDSKpCL._AC_UY436_FMwebp_QL65_.jpg",
+      "id": "fe0b"
     },
     {
-      "productName": "Macbook",
-      "price": "1999",
+      "productName": "toy laptop",
+      "price": "1200",
+      "color": "blue",
+      "category": "toy",
+      "description": "good toys for children",
+      "productUrl": "https://m.media-amazon.com/images/W/MEDIAX_849526-T2/images/I/61vedjX-xpL._AC_UL640_FMwebp_QL65_.jpg",
+      "id": "3b5b"
+    },
+    {
+      "id": "9d31",
+      "productName": "octopus teddy",
+      "price": "999",
+      "color": "light blue",
+      "category": "toy",
+      "description": "good toys for children",
+      "productUrl": "https://m.media-amazon.com/images/W/MEDIAX_849526-T2/images/I/517tM2o269L._AC_UL640_FMwebp_QL65_.jpg"
+    },
+    {
+      "id": "005b",
+      "productName": "storio toy",
+      "price": "1299",
+      "color": "light blue",
+      "category": "toy",
+      "description": "good toys for children",
+      "productUrl": "https://m.media-amazon.com/images/W/MEDIAX_849526-T2/images/I/51d-rgCTx1L._AC_UL640_FMwebp_QL65_.jpg"
+    },
+    {
+      "id": "72d9",
+      "productName": "Nike sport shoes",
+      "price": "14000",
       "color": "white",
-      "category": "laptop",
-      "description": "good laptop",
-      "productUrl": "https://rukminim2.flixcart.com/image/312/312/xif0q/computer/y/8/m/macbook-air-thin-and-light-laptop-apple-original-imagqaphwbzpgjzr.jpeg?q=70",
-      "id": "d460"
+      "category": "shoes",
+      "description": "good running shoes",
+      "productUrl": "https://m.media-amazon.com/images/W/MEDIAX_849526-T2/images/I/51R92jrhIAL._AC_UL640_FMwebp_QL65_.jpg"
     }
   ]
 }
