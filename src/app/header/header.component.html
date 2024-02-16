@@ -4,7 +4,7 @@
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
-      <form class="d-flex" *ngIf="menuType === 'default'&&'user'">
+      <form class="d-flex" *ngIf="menuType !== 'seller'">
         <input class="form-control me-2" type="search" placeholder="Search" #inputElement (keyup)="search($event)">
         <button class="btn btn-outline-success" type="submit">Search</button>
       </form>
@@ -22,7 +22,7 @@
               <a class="nav-link" routerLink="/user-auth">login</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" routerLink="/customer">cart({{cartItem}})</a>
+              <a class="nav-link" routerLink="/myCart">cart({{cartItem}})</a>
             </li>
           </ul>
         </ng-template>
@@ -37,7 +37,7 @@
               <a class="nav-link" href="javascript(void:0)" routerLink="seller-auth" routerLinkActive="active">Seller</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" routerLink="/customer">cart({{cartItem}})</a>
+              <a class="nav-link" [routerLink]="'cartItem.value' && '/myCart'">cart({{cartItem}})</a>
             </li>
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -45,6 +45,7 @@
               </a>
               <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                 <li><a class="dropdown-item" (click)="userlogOut()"><i class="bi bi-box-arrow-right"></i> Log Out</a></li>
+                <li><a class="dropdown-item" routerLink="/MyOrder"><i class="bi bi-box-cart"></i> My Order</a></li>
               </ul>
             </li>
           </ul>

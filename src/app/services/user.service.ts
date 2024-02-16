@@ -30,13 +30,14 @@ export class UserService {
       {
         localStorage.setItem('user', JSON.stringify(result.body))
         this.router.navigate(['/'])
+        this.loginError.emit(false)
       }
       else{
         this.loginError.emit(true)
       }
      })
   }
-
+  
   userReload(){
     if(localStorage.getItem('user'))
     {

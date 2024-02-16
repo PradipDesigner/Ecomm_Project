@@ -13,3 +13,98 @@ span.product-color {
     border-radius: 50%;
     border: 1px solid gray;
 }
+
+
+.card.custom-card {
+    padding: 0;
+    background: #fff;
+    margin-bottom: 16px;
+    border: 1px solid #D0D5DD;
+    border-radius: 6px;
+}
+
+.card.custom-card .card-header {
+    padding: 16px 16px 12px 16px;
+    background: #fff;
+    border-bottom: 1px solid #D0D5DD;
+    flex-wrap: wrap;
+    position: relative;
+}
+
+.card.custom-card .card-footer {
+    background-color: var(--bg-card-footer-1);
+    border-top: 1px solid #D0D5DD;
+    padding: 16px;
+}
+
+/* order-list */
+.order-list {
+    border-bottom: 1px solid #D0D5DD;
+    padding-bottom: 16px;
+    padding-top: 16px;
+    padding-left: 0;
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+    align-items: center;
+    margin-bottom: 0;
+}
+.order-list li{
+    list-style-type: none;
+}
+.order-list:first-child{padding-top: 0;}
+.order-list:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+    margin-bottom: 0;
+}
+
+
+.order-list .calender span {
+    color: var(--text-body-5);
+}
+
+.order-list .payment-mode strong {
+    display: block;
+    color: var(--text-body-1);
+    font-size: 14px;
+    text-align: right;
+}
+
+
+.order-list .company-list:last-child {
+    margin-bottom: 0;
+}
+ul.card-list-item {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin: 0;
+}
+
+.list-title {
+    color: var(--text-body-5);
+    font-size: 12px;
+    font-weight: 600;
+    /* font-family: Roboto; */
+    word-wrap: initial;
+    text-transform: capitalize;
+}
+
+.list-details {
+    color: var(--text-body-1);
+    font-size: 14px;
+    /* font-family: Roboto; */
+    font-weight: 400;
+    display: flex;
+    justify-content: space-between;
+    /* line-height: 22px; */
+    align-items: center;
+    flex-wrap: wrap;
+}
+.coupon-group .form-control {
+    width: calc(100% - 80px);
+    float: left;
+}

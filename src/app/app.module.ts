@@ -9,7 +9,10 @@ import { SellerDashboardComponent } from './seller-dashboard/seller-dashboard.co
 import { HttpClientModule } from '@angular/common/http';
 import { SellerUpdateProductComponent } from './seller-update-product/seller-update-product.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
-import { ReactiveFormsModule } from '@angular/forms'; 
+import { ReactiveFormsModule } from '@angular/forms';
+import { MycartComponent } from './mycart/mycart.component';
+import { CheckoutComponent } from './checkout/checkout.component';
+import { MyOrderComponent } from './my-order/my-order.component'; 
 
 @NgModule({
   declarations: [
@@ -17,7 +20,10 @@ import { ReactiveFormsModule } from '@angular/forms';
     HeaderComponent,
     SellerDashboardComponent,
     SellerUpdateProductComponent,
-    PageNotFoundComponent
+    PageNotFoundComponent,
+    MycartComponent,
+    CheckoutComponent,
+    MyOrderComponent
   ],
   imports: [
     BrowserModule,

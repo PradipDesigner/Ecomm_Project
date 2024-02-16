@@ -1,0 +1,58 @@
+<div class="container mt-4">
+    <div class="row">
+            <div class="col-lg-8 col-md-12" [ngClass]="{'col-lg-8': cartdata?.length > 0, 'col-lg-12': cartdata?.length === 0}">
+                <div class="card custom-card">
+                    <div class="card-header">
+                        <h5>Added in Cart</h5>
+                    </div>
+                    <div class="card-body">
+                        
+                        <ul class="order-list" *ngFor="let cart of cartdata">
+                            <li><img src="{{cart.productUrl}}" alt="" width="100px"></li>
+                            <li>{{cart.productName | titlecase}}</li>
+                            <li>Price: {{cart.price | currency:'INR'}}</li>
+                            <li>Quantity: {{cart.quantity}}</li>
+                            <li>
+                                <button class="btn-sm btn btn-outline-danger" (click)="removeToCart(cart.id)">remove to cart</button>
+                            </li>
+                        </ul>
+                        <p class="text-center mt-3 text" *ngIf="cartdata?.length === 0">No Items added in cart</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-12" *ngIf="cartdata?.length > 0">
+                <div class="card custom-card">
+                    <div class="card-header">
+                        <h5>Payment Details</h5>
+                    </div>
+                    <div class="card-body">
+                        <ul class="card-list-item">
+                            <li class="d-flex justify-content-between">
+                                <div class="list-title">Amount</div>
+                                <div class="list-details fw-bold">{{paymentSummary.price | currency: 'INR'}}</div>
+                            </li>
+                            <li class="d-flex justify-content-between">
+                                <div class="list-title">Gst</div>
+                                <div class="list-details fw-bold">{{paymentSummary.gst | currency: 'INR'}}</div>
+                            </li>
+                            <li class="d-flex justify-content-between">
+                                <div class="list-title">Delevery Charge</div>
+                                <div class="list-details fw-bold">{{paymentSummary.delevery | currency: 'INR'}}</div>
+                            </li>
+                            <li class="d-flex justify-content-between">
+                                <div class="list-title">Discount</div>
+                                <div class="list-details fw-bold text-decoration-line-through">{{paymentSummary.discount | currency: 'INR'}}</div>
+                            </li>
+                            <li class="d-flex justify-content-between">
+                                <div class="list-title"><span class="text-link">Total Payable Amount</span><span
+                                        class="d-block fw-normal">(Including GST)</span></div>
+                                <div class="list-details text-link fw-bold">{{paymentSummary.total | currency: 'INR'}}</div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="card-footer"><button type="submit" class="btn btn-primary m-0 w-100" routerLink="/checkout">Proceed To Payment</button>
+                    </div>
+                </div>
+            </div>        
+    </div>
+</div>

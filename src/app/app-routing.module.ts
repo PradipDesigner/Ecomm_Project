@@ -4,6 +4,7 @@ import { SellerDashboardComponent } from './seller-dashboard/seller-dashboard.co
 import { AuthGuard } from './Authentication/auth.guard';
 import { SellerUpdateProductComponent } from './seller-update-product/seller-update-product.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { MycartComponent } from './mycart/mycart.component';
 
 const routes: Routes = [
   {
@@ -34,6 +35,16 @@ const routes: Routes = [
   },
   {
     path:'user-auth',loadChildren: ()=> import('./user-auth/user-auth.module').then(m=>m.UserAuthModule)
+  },
+  {
+    path:'myCart',component:MycartComponent
+  },
+  {
+    path:'checkout',loadChildren:()=> import('./checkout/checkout.module').then(m=>m.CheckoutModule)
+  },
+  {
+    path:'MyOrder',loadChildren:()=> import('./my-order/my-order.module').then(m=>m.MyOrderModule),
+    // canActivate: [AuthGuard]
   },
   {
     path:'**' , component:PageNotFoundComponent

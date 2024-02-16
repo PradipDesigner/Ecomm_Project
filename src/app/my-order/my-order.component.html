@@ -1,0 +1,30 @@
+<div class="container mt-4">
+    <div class="row">
+        <div class="col-md-12">
+            <h4 class="mb-3">My Orders</h4>
+            <table class="table table-bordered" >
+                <thead>
+                    <tr>
+                        <!-- <th>Product Image</th> -->
+                        <th>OrderId</th>
+                        <th>Price</th>
+                        <th>Order Status</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let data of listData">
+                        <!-- <td><img src="../../assets/images/basket.jpg" alt="" width="100px"></td> -->
+                        <td>{{data.id}}</td>
+                        <td>{{data.TotalPayable}}</td>
+                        <td><span class="badge bg-success">Placed</span></td>
+                        <td><button class="btn btn-sm btn-outline-danger" (click)="OrderCancel(data.id)">Cancel Order</button></td>
+                    </tr>
+                    <tr *ngIf="listData?.length === 0">
+                        <td colspan="4" class="text-center">No orders found</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

@@ -43,6 +43,12 @@
       "username": "yuvansh",
       "email": "yuvansh@gmail.com",
       "password": "12345"
+    },
+    {
+      "id": "02d2",
+      "username": "Yuvansh baghel",
+      "email": "yuvan@gmail.com",
+      "password": "12345"
     }
   ],
   "Products": [
@@ -117,6 +123,48 @@
       "category": "shoes",
       "description": "good running shoes",
       "productUrl": "https://m.media-amazon.com/images/W/MEDIAX_849526-T2/images/I/51R92jrhIAL._AC_UL640_FMwebp_QL65_.jpg"
+    }
+  ],
+  "cart": [
+    {
+      "id": "3dfc",
+      "productName": "iphone 15",
+      "price": "79999",
+      "color": "white",
+      "category": "mobile",
+      "description": "good smart mobile",
+      "productUrl": "https://m.media-amazon.com/images/W/MEDIAX_849526-T2/images/I/71PjpS59XLL._AC_SR360,240_QL70_.jpg",
+      "quantity": 4,
+      "productId": "be25",
+      "userId": "c5a1"
+    },
+    {
+      "id": "913e",
+      "productName": "Boat ",
+      "price": "2999",
+      "color": "black",
+      "category": "watch",
+      "description": "good watch for personal use",
+      "productUrl": "https://images-na.ssl-images-amazon.com/images/I/418liDrUObL._SX320_QL100_AC_SCLZZZZZZZ_.jpg",
+      "quantity": 1,
+      "userId": "00ba",
+      "productId": "4169"
+    }
+  ],
+  "orders": [
+    {
+      "id": "d2e0",
+      "name": "Pradip singh",
+      "mobileNumber": "9111514114",
+      "address": "Tulsi nagar narol ahmedabad"
+    },
+    {
+      "id": "fc68",
+      "name": "PRADIP SINGH",
+      "mobileNumber": "9111514114",
+      "address": "107 Tulsi Nagar Narol",
+      "userId": "02d2",
+      "TotalPayable": 1300
     }
   ]
 }

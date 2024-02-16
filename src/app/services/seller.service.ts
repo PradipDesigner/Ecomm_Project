@@ -7,7 +7,7 @@ import { Router } from '@angular/router';
   providedIn: 'root'
 })
 export class SellerService {
-  // isSellerLoggedIn = new BehaviorSubject<boolean>(false)
+  isSellerLoggedIn = new BehaviorSubject<boolean>(false)
   
   isLoginError = new EventEmitter<boolean>(false)
 

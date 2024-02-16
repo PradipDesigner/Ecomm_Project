@@ -35,9 +35,10 @@ export class HeaderComponent {
         }
         else if(localStorage.getItem('user')){
           let userStore = localStorage.getItem('user')
-          let userdta = userStore && JSON.parse(userStore)[0]
-          this.username = userdta.username
-          this.menuType = 'user'
+          let userdata = userStore && JSON.parse(userStore)[0]
+          this.username = userdata.username
+          this.menuType = 'user';
+          this.productService.getCartList(userdata.id)
         }
         else{
           this.menuType = 'default'
@@ -62,16 +63,17 @@ export class HeaderComponent {
   userlogOut(){
     localStorage.removeItem('user');
     this.router.navigate(['user-auth'])
+    // this.productService.Cartdatastore.emit([])
   }
 
   search(data:any){
-    // if(data){
-    //   let element = data.target as HTMLInputElement
-    //   // console.warn(result.value)
-    //   this.productService.searchProduct(element.value).subscribe((result)=>{
-    //     console.log(result)
-    //   })  
-    // }
+    if(data){
+      let element = data.target as HTMLInputElement
+      // console.warn(element.value)
+      this.productService.searchProduct(element.value).subscribe((result)=>{
+        console.log(result)
+      })  
+    }
     // this.productService.searchProduct(data).subscribe((data: product[]) => {
     //   console.log("final data --->", data);
     //   console.log("Number of products: ", data.length);

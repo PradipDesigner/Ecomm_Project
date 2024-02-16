@@ -6,7 +6,9 @@
     </div>
     <div class="carousel-inner">
         <div *ngFor="let item of productdata; let i = index" [class.carousel-item]="true" [class.active]="i === activeItemIndex">
+          <a href="" routerLink="/productDetails/{{item.id}}">
           <img src="{{ item.productUrl }}" class="d-block" alt="...">
+          </a>
           <div class="carousel-caption d-none d-md-block">
             <h5>{{ item.productName }} {{ item.price | currency:'INR' }}</h5>
             <p>{{ item.description | titlecase }}</p>
@@ -31,9 +33,12 @@
       <h4 class="mb-4">Trendy Producs</h4>
     </div>
     <div class="col-md-4 d-flex align-items-stretch" *ngFor="let product of trendyProducts">
-      <div class="card w-100">
+      <div class="card w-100 custom-card">
         <div class="px-3 pt-3 text-center">
-          <img class="card-img-top" src="{{product.productUrl}}" alt="Card image">
+          <a href="javascript:(0)" routerLink="/productDetails/{{product.id}}">
+            <img class="card-img-top cursor-pointer" src="{{product.productUrl}}" alt="Card image">
+          </a>
+          
         </div>
         <div class="card-body text-center">
           <h5 class="card-title">{{product.productName | titlecase}}</h5>
